@@ -1,0 +1,32 @@
+<!-- <apex:page standardController="Account" recordSetVar="accounts" extensions="AllAccountExtantion">
+    <apex:pageBlock title="My acc">
+        <apex:pageBlockSection>
+            <apex:dataList value="{!accounts}" var="acc" type="a" dir="R">
+                "{!acc.name}"
+            </apex:dataList>
+        </apex:pageBlockSection>
+        <apex:panelGrid columns="2">
+            <apex:commandLink action="{!previous}">prev</apex:commandLink>
+            <apex:commandLink action="{!Next}">next</apex:commandLink>
+        </apex:panelGrid>
+    </apex:pageBlock>
+</apex:page> -->
+
+<apex:page standardController="Opportunity" recordSetVar="Opportunities" tabStyle="Account" lightningStylesheets="true">
+<apex:form>
+    <apex:pageBlock>
+        <apex:pageBlockButtons>
+            <apex:commandButton value="save" action="{!save}" />
+        </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!Opportunities}" var="opp" border="30" align="center">
+            <apex:column value="{!opp.name}" />
+            <apex:column headerValue="Stage name">
+                <apex:inputField value="{!opp.StageName}" />
+            </apex:column>
+            <apex:column headerValue="Close date">
+                <apex:inputField value="{!opp.closeDate}" />
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

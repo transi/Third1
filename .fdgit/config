@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "SFPets"]
+	url = https://github.com/transi/lwc-l7gmcw9n-fork-l7gmtv56.git
+	fetch = +refs/heads/*:refs/remotes/SFPets/*
+[remote "SFPet"]
+	url = https://github.com/transi/SFPets.git
+	fetch = +refs/heads/*:refs/remotes/SFPet/*

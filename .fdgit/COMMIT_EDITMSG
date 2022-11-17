@@ -1,0 +1,91 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .eslintignore
+#	new file:   .forceignore
+#	new file:   .gitignore
+#	new file:   .husky/pre-commit
+#	new file:   .prettierignore
+#	new file:   .prettierrc
+#	new file:   .vscode/extensions.json
+#	new file:   .vscode/launch.json
+#	new file:   .vscode/settings.json
+#	new file:   README.md
+#	new file:   config/project-scratch-def.json
+#	new file:   force-app/main/default/aura/.eslintrc.json
+#	new file:   force-app/main/default/classes/AccountController.cls
+#	new file:   force-app/main/default/classes/AccountTriggerHandler.cls
+#	new file:   force-app/main/default/classes/AccountTriggerHandler.cls-meta.xml
+#	new file:   force-app/main/default/classes/AccountTriggerTest.cls
+#	new file:   force-app/main/default/classes/AccountTriggerTest.cls-meta.xml
+#	new file:   force-app/main/default/classes/AllAccountExtantion.cls
+#	new file:   force-app/main/default/classes/AllAccountExtantion.cls-meta.xml
+#	new file:   force-app/main/default/classes/ContactAttachments.cls
+#	new file:   force-app/main/default/classes/ContactAttachments.cls-meta.xml
+#	new file:   force-app/main/default/classes/JsonController.cls
+#	new file:   force-app/main/default/classes/JsonController.cls-meta.xml
+#	new file:   force-app/main/default/classes/SearchAndEditController.cls
+#	new file:   force-app/main/default/classes/SearchAndEditController.cls-meta.xml
+#	new file:   force-app/main/default/classes/ToastController.cls
+#	new file:   force-app/main/default/classes/ToastController.cls-meta.xml
+#	new file:   force-app/main/default/classes/pagination.cls-meta.xml
+#	new file:   force-app/main/default/lwc/.eslintrc.json
+#	new file:   force-app/main/default/lwc/JsonSave/recordId.html
+#	new file:   force-app/main/default/lwc/JsonSave/recordId.js
+#	new file:   force-app/main/default/lwc/JsonSave/recordId.js-meta.xml
+#	new file:   force-app/main/default/lwc/fileUploadExample/fileUploadExample.html
+#	new file:   force-app/main/default/lwc/fileUploadExample/fileUploadExample.js
+#	new file:   force-app/main/default/lwc/fileUploadExample/fileUploadExample.js-meta.xml
+#	new file:   force-app/main/default/lwc/pagination/__tests__/pagination.test.js
+#	new file:   force-app/main/default/lwc/pagination/pagination.html
+#	new file:   force-app/main/default/lwc/pagination/pagination.js
+#	new file:   force-app/main/default/lwc/pagination/pagination.js-meta.xml
+#	new file:   force-app/main/default/lwc/popular/popular.html
+#	new file:   force-app/main/default/lwc/popular/popular.js
+#	new file:   force-app/main/default/lwc/popular/popular.js-meta.xml
+#	new file:   force-app/main/default/lwc/recordId/recordId.html
+#	new file:   force-app/main/default/lwc/recordId/recordId.js
+#	new file:   force-app/main/default/lwc/recordId/recordId.js-meta.xml
+#	new file:   force-app/main/default/lwc/recordId2/recordId.html
+#	new file:   force-app/main/default/lwc/recordId2/recordId.js
+#	new file:   force-app/main/default/lwc/recordId2/recordId.js-meta.xml
+#	new file:   force-app/main/default/lwc/resetFields/recordId.html
+#	new file:   force-app/main/default/lwc/resetFields/recordId.js
+#	new file:   force-app/main/default/lwc/resetFields/recordId.js-meta.xml
+#	new file:   force-app/main/default/lwc/toast/toast.html
+#	new file:   force-app/main/default/lwc/toast/toast.js
+#	new file:   force-app/main/default/lwc/toast/toast.js-meta.xml
+#	new file:   force-app/main/default/pages/AllAccountPage.page
+#	new file:   force-app/main/default/pages/AllAccountPage.page-meta.xml
+#	new file:   force-app/main/default/pages/Contacs.page
+#	new file:   force-app/main/default/pages/Contacs.page-meta.xml
+#	new file:   force-app/main/default/pages/FirstPage.page
+#	new file:   force-app/main/default/pages/FirstPage.page-meta.xml
+#	new file:   force-app/main/default/pages/SearchPage.page
+#	new file:   force-app/main/default/pages/SearchPage.page-meta.xml
+#	new file:   force-app/main/default/pages/SecondPage.page
+#	new file:   force-app/main/default/pages/SecondPage.page-meta.xml
+#	new file:   force-app/main/default/staticresources/fileSelectorStyle.csss
+#	new file:   force-app/main/default/staticresources/fileSelectorStyle1.css
+#	new file:   force-app/main/default/triggers/AccountTrigger.trigger
+#	new file:   force-app/main/default/triggers/AccountTrigger.trigger-meta.xml
+#	new file:   functions/functest/.eslintrc
+#	new file:   functions/functest/.mocharc.json
+#	new file:   functions/functest/README.md
+#	new file:   functions/functest/index.js
+#	new file:   functions/functest/package.json
+#	new file:   functions/functest/project.toml
+#	new file:   functions/functest/test/index.test.js
+#	new file:   jest.config.js
+#	new file:   manifest/package.xml
+#	new file:   package.json
+#	new file:   scripts/apex/hello.apex
+#	new file:   scripts/soql/account.soql
+#	new file:   sfdx-project.json
+#

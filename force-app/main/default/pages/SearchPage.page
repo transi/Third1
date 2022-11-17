@@ -1,0 +1,20 @@
+<apex:page controller="SearchAndEditController">
+    <apex:form>
+        <apex:pageBlock title="Search Criteria">
+            <apex:pageBlockSection>
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="Acc name" for="accNameId"></apex:outputLabel>
+                    <apex:inputText id="accNameId" value="{!name}" />
+                </apex:pageBlockSectionItem>
+                <apex:commandButton value="Search" action="{!executeSearch}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="Searched Acc" rendered="{!searched}">
+            <apex:pageBlockTable value="{!accounts}" var="acc">
+                <apex:column value="{!acc.Name}" />
+                <apex:column value="{!acc.Type}" />
+                <apex:column value="{!acc.Rating}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,38 @@
+<apex:page standardController="Contact" extensions="ContactAttachments">
+    <!-- extensions="ContactAtt" -->
+    <apex:sectionHeader title="Manage Attachment" />
+    <apex:form>
+        <apex:pageBlock mode="detail">
+            <apex:pageBlockSection title="Contact details">
+                <apex:outputField value="{!contact.Salutation}" />
+                <apex:outputField value="{!contact.FirstName}" />
+                <apex:outputField value="{!contact.LastName}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Attachments">
+                <apex:pageBlockTable value="{!Contact.Attachments}" var="attch">
+                    <apex:column headerValue="Action">
+                        <apex:commandLink value="Del" action="{!deleteAttachment}"> 
+                            <apex:param name="deleteId" assignTo="{!selectedAttch}" value="{!attch.id}" />
+                        </apex:commandLink>
+                        &nbsp;
+                        <apex:outputLink value="/servlet/servlet.FileDonload?file={!attch.id}" target="_blank">
+                            View
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!attch.Name}" />
+                    <apex:column value="{!attch.Description}" />
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Upload attachments" columns="1">
+                <apex:outputField value="{!newAtt.Description}" style="width:90%" />
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="Choose File"></apex:outputLabel>
+                    <apex:outputPanel>
+                        <apex:inputFile value="{!newAtt.body}" fileName="{!newAtt.Name}"></apex:inputFile>
+                        <apex:commandButton value="Upload" action="{!Upload}" />
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

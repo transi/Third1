@@ -1,0 +1,15 @@
+<apex:page standardController="Account" showHeader="true" sidebar="false" tabStyle="Account">
+
+    <apex:tabPanel >
+    
+        <apex:tab label="AD">
+            <apex:detail relatedList="false"  id="accTab"/>
+        </apex:tab>
+        <apex:tab label="Cont">
+            <apex:relatedList list="Contacts"/>
+        </apex:tab>
+        <apex:tab label="Opport"></apex:tab>                
+    
+    </apex:tabPanel>>
+   
+</apex:page>
