@@ -1,0 +1,7 @@
+lightning-input.class1 > div > input {
+  background-color: green !important;
+}
+
+lightning-input.class2 > div > input {
+  background-color: red !important;
+}

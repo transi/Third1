@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <!-- <c:fileCreationUsingApex onlinked="{!c.refresh}" recordId="{!v.recordId}" /> -->
+    <c:recordId onlinked="{!c.refresh}" recordId="{!v.recordId}" /> 
+</aura:component>

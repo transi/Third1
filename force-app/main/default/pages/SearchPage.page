@@ -1,8 +1,8 @@
 <apex:page controller="SearchAndEditController">
-    <apex:form>
+    <apex:form >
         <apex:pageBlock title="Search Criteria">
-            <apex:pageBlockSection>
-                <apex:pageBlockSectionItem>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
                     <apex:outputLabel value="Acc name" for="accNameId"></apex:outputLabel>
                     <apex:inputText id="accNameId" value="{!name}" />
                 </apex:pageBlockSectionItem>

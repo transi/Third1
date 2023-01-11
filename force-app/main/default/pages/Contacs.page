@@ -1,7 +1,7 @@
 <apex:page standardController="Contact" extensions="ContactAttachments">
     <!-- extensions="ContactAtt" -->
     <apex:sectionHeader title="Manage Attachment" />
-    <apex:form>
+    <apex:form >
         <apex:pageBlock mode="detail">
             <apex:pageBlockSection title="Contact details">
                 <apex:outputField value="{!contact.Salutation}" />
@@ -25,9 +25,9 @@
             </apex:pageBlockSection>
             <apex:pageBlockSection title="Upload attachments" columns="1">
                 <apex:outputField value="{!newAtt.Description}" style="width:90%" />
-                <apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
                     <apex:outputLabel value="Choose File"></apex:outputLabel>
-                    <apex:outputPanel>
+                    <apex:outputPanel >
                         <apex:inputFile value="{!newAtt.body}" fileName="{!newAtt.Name}"></apex:inputFile>
                         <apex:commandButton value="Upload" action="{!Upload}" />
                     </apex:outputPanel>

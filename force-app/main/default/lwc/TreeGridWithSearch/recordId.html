@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Search In Tree Grid" icon-name="custom:custom57">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="search" onchange={handleKeyChange}
+                class="slds-show slds-is-relative slds-var-m-bottom_small" label="Search">
+            </lightning-input>
+            <lightning-tree-grid columns={gridColumns} data={gridData} key-field="Id">
+            </lightning-tree-grid>
+        </div>
+    </lightning-card>
+</template>

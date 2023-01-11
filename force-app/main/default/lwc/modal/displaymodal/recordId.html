@@ -1,0 +1,17 @@
+<template>
+    <lightning-button label="open modal" onclick={handleOpenModal}></lightning-button>
+    <c-modal if:true={openModal} modal-class="slds-modal slds-fade-in-open slds-modal_medium">
+        <span slot="headercontent">
+            <lightning-button-icon class="slds-modal__close" title="Close" icon-name="utility:close"
+                icon-class="slds-button_icon-inverse" onclick={handleCloseModal}>
+            </lightning-button-icon>
+            This is a generic Modal
+        </span>
+        <span slot="bodycontent">
+            Insert any component or HTML content here
+        </span>
+        <span slot="footercontent">
+            <button class="slds-button slds-button_neutral" onclick={handleCloseModal} title="Cancel">Cancel</button>
+        </span>
+    </c-modal>
+</template>

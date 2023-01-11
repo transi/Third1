@@ -13,9 +13,9 @@
 </apex:page> -->
 
 <apex:page standardController="Opportunity" recordSetVar="Opportunities" tabStyle="Account" lightningStylesheets="true">
-<apex:form>
-    <apex:pageBlock>
-        <apex:pageBlockButtons>
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockButtons >
             <apex:commandButton value="save" action="{!save}" />
         </apex:pageBlockButtons>
         <apex:pageBlockTable value="{!Opportunities}" var="opp" border="30" align="center">
