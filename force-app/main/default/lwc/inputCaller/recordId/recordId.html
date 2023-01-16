@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Dynamic HTML Input With Field Level Security" icon-name="custom:custom63">
+        <div class="slds-var-m-around_medium">
+            <p class="slds-var-m-bottom_small">
+                <!-- <c-input object-api-name="Account" field-name="NumberOfEmployees" onchange={handleChange}></c-input> -->
+                <c-record-id2 object-api-name="Account" field-name="NumberOfEmployees" onchange={handleChange}></c-record-id2>
+                Entered Value is: {fieldValueFromInput}
+            </p>
+        </div>
+    </lightning-card>
+</template>

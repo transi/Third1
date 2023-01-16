@@ -1,0 +1,6 @@
+<template>
+    <lightning-input if:true={fieldInfo.updateable} type={fieldInfo.dataType} 
+          label={fieldInfo.label} required={fieldInfo.required} 
+          field-level-help={fieldInfo.inlineHelpText} onchange={handleChange}>
+    </lightning-input>
+</template>
