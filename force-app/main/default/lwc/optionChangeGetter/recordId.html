@@ -1,0 +1,13 @@
+<template>
+    <!-- this combobox will control the requiredness for the rest of components -->
+    <lightning-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+
+    <!-- required property using the getter function -->
+    <lightning-input type="text" label="Enter some text" required={isRequired}></lightning-input>
+</template>

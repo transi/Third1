@@ -1,0 +1,25 @@
+<template>
+    <template for:each={sections} for:item="section">
+        <c-expandable-section key={section.id} id={section.id} label={section.label}>
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae
+            elit libero, a pharetra augue.
+        </c-expandable-section>
+    </template>
+
+    <c-expandable-section id="4" label="Individual Section 1">
+        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac
+        cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae
+        elit libero, a pharetra augue.
+    </c-expandable-section>
+
+    <c-expandable-section id="5" label="Individual Section 2">
+        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac
+        cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae
+        elit libero, a pharetra augue.
+    </c-expandable-section>
+
+</template>
