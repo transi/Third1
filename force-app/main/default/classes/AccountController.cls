@@ -30,4 +30,9 @@ public class AccountController {
         public Integer recordEnd {get;set;}
         public List<Account> accounts {get;set;}
     }
+
+    @AuraEnabled(cacheable=true)
+    public static List<Account> getAccounts(){
+        return [Select Id,Name,AccountSource,AnnualRevenue from Account];
+    }
 }
