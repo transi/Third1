@@ -20,9 +20,19 @@ export default class InputExample extends LightningElement() {
         alert('Mobile '+ this.mobilevalue);
         
     }
-    handleCancel(){
+    async handleCancel(){
 
+        const result = await LightningConfirm.open({
+            message: 'Are you sure you want to reset fields?',
+            variant: 'header',
+            label: 'Please Confirm',
+            theme: 'error',
+        });
+
+        if(result==true){
             this.emailvalue = "username@example.com";
             this.mobilevalue = "000-000-0000";
+
+        }
     }
 }
