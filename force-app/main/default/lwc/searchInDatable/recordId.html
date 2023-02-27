@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-grid slds-wrap slds-m-left_xx-large">
+        
+        <div class="slds-col slds-size_2-of-3 slds-m-left_xx-large">
+            <lightning-input class="slds-m-left_xx-large" type="search" label="Search Languages" placeholder="Filter Text" onchange={handleSearch}></lightning-input>
+        </div>
+        
+        <div class="slds-col slds-size_2-of-3 slds-m-left_xx-large">
+            <div class="slds-m-left_xx-large slds-scrollable_y" style="height:15rem;">
+                <template if:true={data}>
+                    
+                    <lightning-datatable hide-table-header key-field="Id" data={data} columns={columns} 
+                        onrowselection = {handleRowAction} selected-rows={listOfSelectedRecords}>
+                    </lightning-datatable>
+                </template>
+                <template if:true={error}>
+                    {error}>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

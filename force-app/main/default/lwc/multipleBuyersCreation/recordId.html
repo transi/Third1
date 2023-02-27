@@ -1,0 +1,49 @@
+<template>
+	<lightning-card>
+		<h3 slot="title">
+			<lightning-icon icon-name="standard:timesheet" alternative-text="Event" size="small"></lightning-icon>
+			&nbsp;Multiple Buyers Creation
+		</h3>
+		<template for:each={itemList} for:item="item" for:index="index">
+			<lightning-record-edit-form key={item.id} object-api-name="Buyer__c" onsuccess={handleSuccess}>
+				<lightning-messages> </lightning-messages>
+				<lightning-layout multiple-rows>
+					<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+						padding="around-small">
+						<lightning-input-field field-name="Account__c" name="Account" data-id={item.id} variant="label-stacked" required>
+						</lightning-input-field>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+						padding="around-small">
+						<lightning-input-field field-name="Buyer_Percentage__c" name="Percentage" data-id={item.id} variant="label-stacked" required> 
+						</lightning-input-field>
+					</lightning-layout-item>    
+					<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+						padding="around-small">
+						<lightning-input-field field-name="Opportunity__c" variant="label-stacked" value={opportunityId} disabled>
+						</lightning-input-field> 
+					</lightning-layout-item>        
+				   <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+						padding="around-small">
+						<div class="slds-p-top_medium">
+							<lightning-icon icon-name="action:new" access-key={item.id} id={index}
+								alternative-text="Add Row" size="small" title="Add Row" onclick={addRow}>
+							</lightning-icon>
+							<lightning-icon icon-name="action:delete" access-key={item.id} id={index}
+								alternative-text="Delete Row" size="small" title="Delete Row" onclick={removeRow}>
+							</lightning-icon>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+	
+			</lightning-record-edit-form>
+		</template>
+		</br>
+		<lightning-layout>
+			<div class="slds-align_absolute-center">
+				<lightning-button variant="success" onclick={handleSubmit} name="submit" label="Submit">
+				</lightning-button>
+			</div>
+		</lightning-layout>
+	</lightning-card>
+</template>	

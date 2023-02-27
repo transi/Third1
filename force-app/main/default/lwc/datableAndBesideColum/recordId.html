@@ -1,0 +1,36 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="6">
+            <table onchange={handleValueChange}>
+                <thead>
+                    <tr>
+                        <th for:each={columns} for:item="column" key={column.id}>
+                            {column.label}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr for:each={rows} for:item="row" key={row.id}>
+                        <td width="50%" for:each={columns} for:item="column" key={column.id}>
+                            <input if:true={column.input} data-row={row.id} name={column.name} type={column.type} readonly={column.readonly}/>
+                            <button if:true={column.action} onclick={column.action}>{column.buttonLabel}</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <button onclick={handleAddRow}>Add</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+            <lightning-datatable data={rows} columns={columns} oncellchange={handleCellChange} key-field="id"
+                suppress-bottom-bar onrowaction={handleRowDelete}>
+            </lightning-datatable>
+            <button onclick={handleAddRow}>Add</button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
