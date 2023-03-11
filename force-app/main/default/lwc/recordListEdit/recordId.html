@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title="AccountFieldSet" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={account}>
+                <div class="slds-box slds-box_x-small">
+                    <p>Name: {account.Name}</p>
+                    <p>Industry: {account.Industry}</p>
+                    <p>Description: {account.Description}</p>
+                </div>
+            </template>
+        </div>
+        </br> 
+        <!-- <div class="slds-m-around_medium">
+            <lightning-datatable
+                key-field="id"
+                data={contact}
+                columns={columns} 
+                draft-values={draftValues}>
+            </lightning-datatable>
+        </div>    --> 
+        <div class="slds-p-around--medium">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                <thead> 
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="ID">ID</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Name">Name</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={relatedrecord} for:item="rObj" for:index="index">
+                        <tr class="slds-hint-parent" key={rObj.Id}>
+                            <td>
+                                <div class="slds-truncate" title="Id">{rObj.Id}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title="Id">{rObj.Name}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title="Id">
+                                    <!--    <lightning-button variant="Destructive" data-id={rObj.Id} title="Destructive action" label="Delete" class="slds-button slds-button_destructive"  onclick={handleDelete}></lightning-button>
+                              -->
+                                    <lightning-button  icon-name="utility:delete"   value={rObj.Id}   onclick={handleDelete}></lightning-button>
+                                </div>   
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+            <lightning-button icon-name="utility:add" label="Add" variant="brand" onclick={handleInputSearch} ></lightning-button>
+            <template if:true={boolVisible}>
+                <lightning-input   label="Name" placeholder="type here.."></lightning-input>
+                <lightning-button  label="Save" variant="brand" onclick={handleCreateRecord} ></lightning-button>
+            </template>
+        </div> 
+    </lightning-card>
+</template>

@@ -1,0 +1,9 @@
+.typing-output{
+    padding: 1%;
+    font-size: medium;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    color: midnightblue;
+}
+.force-visible{
+    visibility: visible !important;
+}
