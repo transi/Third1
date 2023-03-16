@@ -3,10 +3,21 @@
     {
       "path": "force-app",
       "default": true
+    },
+    {
+      "path": "secondPackage",
+      "package": "secondPackageRety",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": "Second package retry"
     }
   ],
   "name": "Third",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "56.0"
+  "sourceApiVersion": "56.0",
+  "packageAliases": {
+    "secondPackageRety": "0Ho7Q000000wkHTSAY"
+  }
 }
