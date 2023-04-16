@@ -1,0 +1,55 @@
+<template>
+  <lightning-card>
+      <h3 slot="title">
+          <lightning-icon icon-name="action:new" alternative-text="Event" size="small"></lightning-icon>
+          &nbsp; Add Received Inventory Items
+      </h3>
+
+      <div class = "slds-p-around_medium" >
+          <template for:each={itemList} for:item="item" for:index="index">
+              <lightning-record-edit-form key={item.id} object-api-name="inventory__c">
+                  <lightning-messages> </lightning-messages>
+                      <div class="slds-grid">
+                          <div class="slds-size_4-of-12">
+                              <div> 
+                                  <lightning-input-field field-name="Item_Type__c" variant="label-stacked" required>
+                                  </lightning-input-field>
+                              </div>
+                          </div>
+                          <div class="slds-size_2-of-12">
+                              <div>
+                                  <lightning-input-field field-name="Received__c" variant="label-stacked" required>
+                                  </lightning-input-field>
+                              </div>
+                          </div>
+                              <div >
+                                  <lightning-input-field field-name="donation__c" value={recordId} variant="label-stacked" required>
+                                  </lightning-input-field>
+                              </div>
+                          <div class="slds-size_2-of-12">
+                              <div>
+                                  <div class= "slds-m-top_large">
+                                      <lightning-icon icon-name="utility:add" access-key={item.id} id={index}
+                                          alternative-text="Add Row" size="small" title="Add Row" onclick={addRow}>
+                                      </lightning-icon>
+                                      &nbsp; &nbsp;
+                                      <lightning-icon icon-name="utility:delete" access-key={item.id} id={index}
+                                          alternative-text="Delete Row" size="small" title="Delete Row" onclick={removeRow}>
+                                      </lightning-icon>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+             </lightning-record-edit-form>
+          </template>
+          <lightning-layout>
+              <div class="slds-align_absolute-center slds-p-top_small" >
+                  <lightning-button class = "slds-p-around_xxx-small" variant="success" onclick={handleSubmit} name="submit" label="Submit">
+                  </lightning-button>
+                  <lightning-button class = "slds-p-around_xxx-small" variant="neutral" onclick={handleReset} name="cancel" label="Cancel">
+                  </lightning-button>
+              </div>
+          </lightning-layout>
+      </div>
+</lightning-card>
+</template>

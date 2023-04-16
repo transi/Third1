@@ -1,0 +1,15 @@
+<template>
+    <template if:true={faqs.data}>
+      <template for:each={faqs.data} for:item="faq">
+        <lightning-accordion
+          allow-multiple-sections-open
+          key={faq.key}
+          active-section-name={activeSections}
+        >
+          <lightning-accordion-section name={faq.key} label={faq.question}>
+            <small>{faq.answer}</small>
+          </lightning-accordion-section>
+        </lightning-accordion>
+      </template>
+    </template>
+  </template>

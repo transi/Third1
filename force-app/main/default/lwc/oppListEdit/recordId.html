@@ -1,0 +1,18 @@
+<template>
+  <lightning-card title="Opportunities">
+      <template if:true={opps.data}>
+          <lightning-record-form
+              record-id={recordId}
+              object-api-name={objectApiName}
+              fields={cols}
+          columns="2"
+          mode="edit"
+          onsubmit={handleSubmit}
+      >
+      </lightning-record-form>
+  </template>
+  <template if:true={opps.error}>
+      <p>{opps.error}</p>
+  </template>
+</lightning-card>
+</template>
