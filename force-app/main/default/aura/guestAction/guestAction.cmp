@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
+    <aura:attribute name="inputValue" type="String"/>
+    <aura:handler name="change" value="{!v.inputValue}" action="{!c.handleValueChange}"/>
+    <c:recordId onvaluechange="{!c.getValueFromLwc}"></c:recordId>
+    <!-- <c:guestComponent onvaluechange="{!c.getValueFromLwc}"></c:guestComponent> -->
+</aura:component>

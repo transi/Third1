@@ -1,0 +1,34 @@
+<template>
+
+
+    <lightning-card class="myfont">
+   
+   
+     <b class="myTitle">For:Each List :</b>
+   
+   
+      <template for:each={contacts} for:item="con">
+   
+   
+         <div key={con.Id} class="mypad">
+   
+   
+          Id : {con.Id},<br/>
+   
+   
+          Name : {con.Name},<br/>
+   
+   
+          Website : {con.Website}
+   
+   
+         </div>
+   
+   
+     </template>
+   
+   
+    </lightning-card>
+   
+   
+   </template>

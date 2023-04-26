@@ -1,0 +1,52 @@
+<template>
+
+
+    <lightning-card class="myfont">
+  
+  
+     <b class="myTitle">For:Each List :</b>
+  
+  
+    <template iterator:it={contacts}>
+  
+  
+   <div key={it.value.Id} class="mypad">
+  
+  
+   <div if:true={it.first} class="changeFirst">
+  
+  
+       This is first
+  
+  
+   </div>
+  
+  
+         Id : {it.value.Id},<br/>
+  
+  
+         Name : {it.value.Name},<br/>
+  
+  
+         Website : {it.value.Website}
+  
+  
+   <div if:true={it.last} class="changeLast">
+  
+  
+          This is last
+  
+  
+   </div>
+  
+  
+     </div>
+  
+  
+    </template>
+  
+  
+   </lightning-card>
+  
+  
+  </template>
