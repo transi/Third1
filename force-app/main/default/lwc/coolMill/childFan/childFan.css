@@ -1,0 +1,204 @@
+body {
+  background-color: white;
+}
+
+span {
+  display: inline-block;
+}
+
+.floor {
+  background-color: #1e2d49;
+
+  width: 468px;
+
+  margin-left: 178px;
+
+  position: absolute;
+
+  height: 38px;
+
+  margin-top: 169px;
+
+  z-index: 0;
+}
+
+.mill {
+  background-color: #1e2d49;
+
+  width: 50px;
+
+  height: 140px;
+
+  transform: perspective(12px) rotateX(3deg);
+
+  position: absolute;
+
+  z-index: 3;
+
+  margin-left: 550px;
+}
+
+.mill::before {
+  content: "";
+
+  background-color: #fdc500;
+
+  width: 20px;
+
+  height: 20px;
+
+  position: absolute;
+
+  margin-left: 15px;
+
+  margin-top: 35px;
+}
+
+.mill::after {
+  content: "";
+
+  background-color: #fdc500;
+
+  width: 20px;
+
+  height: 25px;
+
+  position: absolute;
+
+  margin-left: 15px;
+
+  margin-top: 70px;
+}
+
+.dome {
+  background-color: #1e2d49;
+
+  width: 35px;
+
+  height: 35px;
+
+  position: absolute;
+
+  transform-origin: 0 100%;
+
+  transform: rotate(45deg);
+
+  overflow: hidden;
+
+  margin-left: 551px;
+
+  margin-top: -23px;
+
+  z-index: 4;
+}
+
+.fan {
+  background-color: #37475e; /*37475E */
+
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 100%;
+
+  position: absolute;
+
+  margin-left: 573px;
+
+  z-index: 7;
+
+  animation-name: rotate_fan;
+
+  animation-iteration-count: infinite;
+}
+
+.fan_blade1,
+.fan_blade2,
+.fan_blade3,
+.fan_blade4 {
+  background-color: #37475e;
+
+  width: 4px;
+
+  height: 60px;
+
+  position: absolute;
+
+  z-index: 6;
+
+  margin-left: 35px;
+
+  margin-top: -28px;
+
+  border-left: 1.5px solid black;
+
+  border-top: 1px solid black;
+
+  transform: rotate(90deg);
+}
+
+.fan_blade2 {
+  transform: rotate(180deg);
+
+  margin-left: 1px;
+
+  margin-top: 5px;
+}
+
+.fan_blade3 {
+  transform: rotate(360deg);
+
+  margin-left: 3px;
+
+  margin-top: -60px;
+}
+
+.fan_blade4 {
+  transform: rotate(270deg);
+
+  margin-top: -28px;
+
+  margin-left: -30px;
+}
+
+.fan_blade1::before,
+.fan_blade2::before,
+.fan_blade3::before,
+.fan_blade4::before {
+  content: "";
+
+  background-color: transparent;
+
+  width: 20px;
+
+  height: 45px;
+
+  margin-left: 5px;
+
+  background-size: 10px 11px;
+
+  background-image: linear-gradient(
+      to left,
+
+      white 2px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+
+      white 2px,
+      transparent 1px
+    ),
+    linear-gradient(to top, white 1px, transparent 0px);
+
+  position: absolute;
+}
+
+@keyframes rotate_fan {
+  from {
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

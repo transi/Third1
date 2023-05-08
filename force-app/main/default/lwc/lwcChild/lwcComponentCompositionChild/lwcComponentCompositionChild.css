@@ -1,0 +1,33 @@
+.kid img {
+  padding-top: 2em;
+
+  height: 150px;
+
+  position: absolute;
+
+  animation: walk 10s infinite;
+
+  animation-direction: normal;
+}
+
+@keyframes walk {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: 20%;
+  }
+
+  50% {
+    left: 40%;
+  }
+
+  75% {
+    left: 60%;
+  }
+
+  100% {
+    left: 80%;
+  }
+}

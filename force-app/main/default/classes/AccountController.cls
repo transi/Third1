@@ -35,4 +35,13 @@ public class AccountController {
     public static List<Account> getAccounts(){
         return [Select Id,Name,AccountSource,AnnualRevenue from Account];
     }
+
+    @AuraEnabled(cacheable=true)
+    public static List<Account> getAccountsXLS()
+    {
+        List<Account> accountList = [SELECT Id, Name, ShippingCity, ShippingState, Email__c FROM Account
+                                            //  WHERE Email__c !='' 
+                                             LIMIT 20];
+        return accountList;
+    }
 }
