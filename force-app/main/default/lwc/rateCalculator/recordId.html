@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="*******************HDFC Bank********************" >
+      <p><b><u>Fixed Deposit Calculator</u></b></p>
+
+      <lightning-input type="number" label="Enter the Prinipal" onchange={handlePrincipalChange}></lightning-input>
+      <lightning-input type="number" label="Enter the year of investment" onchange={handleYearChange}></lightning-input>
+      <lightning-input type="number" label="Enter the rate of interest" onchange={handleInterestChange}></lightning-input> 
+
+     <lightning-button-group>
+          <lightning-button label="Calculate" onclick={calculate}></lightning-button>
+          <lightning-button label="Clear" onclick={clear}></lightning-button>
+      </lightning-button-group>
+
+      <p>   The Maturity amount is = {maturityamount} </p>
+  </lightning-card>
+  
+</template>

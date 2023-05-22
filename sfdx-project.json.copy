@@ -3,6 +3,14 @@
     {
       "path": "force-app",
       "default": true
+    },
+    {
+      "path": "secondPackage",
+      "package": "secondPackageRety",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": "Second package retry"
     }
   ],
   "name": "Third",

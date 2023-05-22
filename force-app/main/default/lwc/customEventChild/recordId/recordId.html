@@ -1,0 +1,22 @@
+<template>
+ <lightning-card>
+ <div> 
+  <h1 style='font-size:1.5em; margin-left:45%;' 
+      class="slds-text-title">
+   This is parent screen
+  </h1>
+   <br/> 
+ <span style="font-size:2em;margin-left:30%;">
+  This is response from child : 
+ <span style="color:#ffa372;">
+  {response}
+  </span> 
+ </span> 
+  </br>
+ </div>
+  <hr>
+//Child component included here 
+  <c-custom-event-child onmyevent={handleResponse}>
+ </c-custom-event-child>
+ </lightning-card>
+</template>
