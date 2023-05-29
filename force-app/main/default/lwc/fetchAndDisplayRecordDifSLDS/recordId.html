@@ -1,0 +1,49 @@
+<template>
+
+  <template for:each={wiredAccounts.data} for:item="acc">
+    <p key={acc.id}>
+         {acc.Name}
+    </p>
+  </template>
+
+  <div style="height: 500px;">
+    <template if:true={accountList}>
+        <lightning-datatable
+                key-field="id"
+                data={accountList}
+                columns={columns}>
+        </lightning-datatable>
+    </template>
+  </div>
+
+  <div style="height: 500px;">
+    <template if:true={accountList}>
+         <lightning-datatable
+                 key-field="id"
+                 data={accountList}
+                 columns={columns}>
+         </lightning-datatable>
+    </template>
+    </div>
+
+    <div class="slds-grid slds-wrap">
+      <template for:each={accountList} for:item="acc">
+       <span key={acc.id}>
+         <div class="slds-col slds-size_3-of-12">
+          <lightning-badge label={acc.Name}></lightning-badge> &nbsp;
+         </div>
+       </span>
+      </template>
+     </div>
+
+     <div class="slds-box">
+      <template for:each={accountList} for:item="acc">
+           <span key={acc.id}>
+                <div class="slds-col">
+                     <lightning-input type="checkbox" label={acc.Name} ></lightning-input>
+                </div>
+           </span>
+      </template>
+    </div>      
+
+  </template>
