@@ -1,0 +1,9 @@
+<template>
+    <div>
+        <template for:each={menuItems} for:item="menuItem">
+            <li key={menuItem.id} onclick={handleNavigation}  class="slds-p-top_xx-small">
+                <a data-target={menuItem.target}>{menuItem.label}</a>
+            </li>
+        </template>
+    </div>
+</template>
