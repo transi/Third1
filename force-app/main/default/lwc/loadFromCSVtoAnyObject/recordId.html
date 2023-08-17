@@ -1,0 +1,47 @@
+<template>
+    <lightning-card>
+      <div slot="title" class="slds-m-left_small">Upsert Records</div>
+      <div class="slds-m-around_medium">
+        <div class="slds-m-left_small slds-m-around_small">
+          <!--Picklist-->
+          <lightning-combobox
+            label="Select Object"
+            default="Select Object"
+            value={selectedObject}
+            options={objectNamesForPicklist}
+            onchange={getSelectedObject}
+          ></lightning-combobox>
+        </div>
+        <div
+          class="slds-m-left_none slds-p-left_none demo-only demo-only--sizing slds-grid slds-wrap"
+        >
+          <div
+            class="slds-m-left_none slds-p-left_none slds-col slds-size_2-of-3"
+          >
+            <div
+              class="slds-m-left_none slds-p-left_none slds-box_x-small slds-text-align_center slds-m-around_small"
+            >
+              <!--File upload component-->
+              <lightning-file-upload
+                label="Upload CSV File"
+                accept={acceptedFormats}
+                data-id="csv-file"
+                onuploadfinished={handleFileInputChange}
+              >
+              </lightning-file-upload>
+            </div>
+          </div>
+          <div class="slds-col slds-size_1-of-3 .slds-is-relative">
+            <div style="position: relative; top: 2.9rem; left: 0rem; border: 0px">
+              <!--Upsert records button-->
+              <lightning-button
+                label="Upsert Records"
+                variant="brand"
+                onclick={handleUpsert}
+              ></lightning-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </lightning-card>
+  </template>

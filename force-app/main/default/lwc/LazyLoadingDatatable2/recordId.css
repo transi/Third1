@@ -1,0 +1,7 @@
+.table-container {
+    height: 300px;
+    overflow-y: auto;
+  }
+  .scrollable-table {
+    height: fit-content;
+  }
