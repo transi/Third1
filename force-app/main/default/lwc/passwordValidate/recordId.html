@@ -1,0 +1,16 @@
+<template>
+  <lightning-input
+    label="Password"
+    type="password"
+    value={password}
+    onchange={handlePasswordChange}
+    required
+  ></lightning-input>
+  <div class="error">{passwordError}</div>
+
+  <lightning-button
+    label="Submit"
+    onclick={handleSubmit}
+    variant="brand"
+  ></lightning-button>
+</template>

@@ -1,0 +1,23 @@
+<template>
+  <lightning-input
+    label="Email"
+    value={email}
+    onchange={handleEmailChange}
+    required
+  ></lightning-input>
+  <div class="error">{emailError}</div>
+
+  <lightning-input
+    label="Confirm Email"
+    value={confirmEmail}
+    onchange={handleConfirmEmailChange}
+    required
+  ></lightning-input>
+  <div class="error">{confirmEmailError}</div>
+
+  <lightning-button
+    label="Submit"
+    onclick={handleSubmit}
+    variant="brand"
+  ></lightning-button>
+</template>

@@ -1,0 +1,23 @@
+<template>
+  
+    <!-- Create a form to display the contact fields -->
+    <lightning-record-edit-form object-api-name="Contact" onsubmit={handleSubmit} onerror={handleError}>
+      <div class="slds-scrollable_y" style="height: 200px; overflow:scroll;">
+        <!-- Use lightning-input-field components with required attribute to display the contact fields -->
+        <lightning-input-field field-name="Name" required></lightning-input-field>
+        <lightning-input-field field-name="Email" required></lightning-input-field>
+        <lightning-input-field field-name="Phone" required></lightning-input-field>
+        <lightning-input-field field-name="MailingStreet" required></lightning-input-field>
+        <lightning-input-field field-name="MailingCity" required></lightning-input-field>
+        <lightning-input-field field-name="MailingState" required></lightning-input-field>
+        <lightning-input-field field-name="MailingPostalCode" required></lightning-input-field>
+        <lightning-input-field field-name="MailingCountry" required></lightning-input-field>
+      </div>
+  
+      <!-- Create a button to save the record -->
+      <div class="slds-m-top_medium">
+        <lightning-button variant="brand" type="submit" name="save" label="Save"></lightning-button>
+      </div>
+    </lightning-record-edit-form>
+  </template>
+  

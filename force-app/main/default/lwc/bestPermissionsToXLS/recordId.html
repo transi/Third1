@@ -1,0 +1,112 @@
+<template>
+  <lightning-card title="Permission Set Explorer" icon-name="custom:custom6">
+      <div class="slds-grid slds-gutters">
+          <div class="slds-col slds-size_6-of-12">
+              <div class="picklist-container">
+                  <lightning-combobox
+                      label="Select Permission Set"
+                      options={permissionSetOptions}
+                      value={selectedPermissionSet}
+                      onchange={handlePermissionSetChange}>
+                  </lightning-combobox>
+              </div>
+          </div>
+          <div class="slds-col slds-size_6-of-12 slds-align-end">
+              <div class="button-container">
+                  <lightning-button
+                  variant="brand"
+                  label="Generate Excel"
+                  title="Generate Excel"
+                  onclick={handleGenerateExcel}>
+              </lightning-button>
+              </div>
+          </div>
+      </div>
+
+      <template if:true={isLoading}>
+          <div class="slds-align_absolute-center">
+              <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+          </div>
+      </template>
+
+      <div class="slds-m-around_medium slds-table_header-fixed_container" style="height: 300px; overflow-y: auto;">
+         
+          <table class="slds-table slds-table_bordered slds-table_fixed-layout">
+              <thead>
+                  <tr class="slds-line-height_reset">
+                      <th class="slds-text-title_caps">Object Name</th>
+                      <th class="slds-text-title_caps">Read</th>
+                      <th class="slds-text-title_caps">Create</th>
+                      <th class="slds-text-title_caps">Edit</th>
+                      <th class="slds-text-title_caps">Delete</th>
+                      <th class="slds-text-title_caps">View All</th>
+                      <th class="slds-text-title_caps">Modify All</th>
+                  </tr>
+              </thead>
+          </table>
+          <div style="max-height: 260px; overflow-y: auto;">
+              <table class="slds-table slds-table_bordered slds-table_fixed-layout">
+                  <tbody>
+                      <template for:each={objectPermissions} for:item="permission" for:index="index">
+                          <tr key={permission.Id}>
+                              <td class="slds-truncate" title={permission.SObjectType}>{permission.SObjectType}</td>
+                              <td>
+                                  <template if:true={permission.PermissionsRead}>
+                                      <lightning-icon icon-name="utility:success" alternative-text="TRUE" title="TRUE" size="xx-small"></lightning-icon>
+                                  </template>
+                                  <template if:false={permission.PermissionsRead}>
+                                      <lightning-icon icon-name="utility:close" alternative-text="FALSE" title="FALSE" size="xx-small"></lightning-icon>
+                                  </template>
+                              </td>
+                              <td>
+                                  <template if:true={permission.PermissionsCreate}>
+                                      <lightning-icon icon-name="utility:success" alternative-text="TRUE" title="TRUE" size="xx-small"></lightning-icon>
+                                  </template>
+                                  <template if:false={permission.PermissionsCreate}>
+                                      <lightning-icon icon-name="utility:close" alternative-text="FALSE" title="FALSE" size="xx-small"></lightning-icon>
+                                  </template>
+                              </td>
+                              <td>
+                                  <template if:true={permission.PermissionsEdit}>
+                                      <lightning-icon icon-name="utility:success" alternative-text="TRUE" title="TRUE" size="xx-small"></lightning-icon>
+                                  </template>
+                                  <template if:false={permission.PermissionsEdit}>
+                                      <lightning-icon icon-name="utility:close" alternative-text="FALSE" title="FALSE" size="xx-small"></lightning-icon>
+                                  </template>
+                              </td>
+                              <td>
+                                  <template if:true={permission.PermissionsDelete}>
+                                      <lightning-icon icon-name="utility:success" alternative-text="TRUE" title="TRUE" size="xx-small"></lightning-icon>
+                                  </template>
+                                  <template if:false={permission.PermissionsDelete}>
+                                      <lightning-icon icon-name="utility:close" alternative-text="FALSE" title="FALSE" size="xx-small"></lightning-icon>
+                                  </template>
+                              </td>
+                              <td>
+                                  <template if:true={permission.PermissionsViewlAll}>
+                                      <lightning-icon icon-name="utility:success" alternative-text="TRUE" title="TRUE" size="xx-small"></lightning-icon>
+                                  </template>
+                                  <template if:false={permission.PermissionsViewlAll}>
+                                      <lightning-icon icon-name="utility:close" alternative-text="FALSE" title="FALSE" size="xx-small"></lightning-icon>
+                                  </template>
+                              </td>
+                              <td>
+                                  <template if:true={permission.PermissionsModifyAll}>
+                                      <lightning-icon icon-name="utility:success" alternative-text="TRUE" title="TRUE" size="xx-small"></lightning-icon>
+                                  </template>
+                                  <template if:false={permission.PermissionsModifyAll}>
+                                      <lightning-icon icon-name="utility:close" alternative-text="FALSE" title="FALSE" size="xx-small"></lightning-icon>
+                                  </template>
+                              </td>
+                          </tr>
+                      </template>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <!-- Footer section -->
+      <footer class="slds-m-around_medium">
+          <p>Developed by <a href="https://sfdclesson.com/" target="_blank">SFDCLesson</a></p>
+      </footer>
+  </lightning-card>
+</template>
