@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Demo of Url Addressable">
+        <template if:true={isSummaryView}>
+            <div class="summary-view">
+                <!-- Summary data content here -->
+                <p>This is the summary view.</p>
+            </div>
+        </template>
+        <template if:true={isIndividualView}>
+            <div class="individual-view">
+                <!-- Individual data content here -->
+                <p>This is the individual view.</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>
